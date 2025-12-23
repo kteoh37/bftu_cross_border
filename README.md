@@ -41,7 +41,7 @@ The data can be used freely and without further permission as long as explicit r
 | **iBoP-C Intensity** | Monthly / Quarterly / Annual | 190 countries, 1950–2023 | Same as iBoP-C, but weighting each policy measure by an intensity score based on a subjective assessment of the measure's economic impact on cross-border flows. |
 | **iBoP-C Subcategories** | Monthly / Quarterly / Annual | 190 countries, 1950–2023 | Same as iBoP-C, but categories are further disaggregated to 24 subcategories. Intensity weighted version is available upon request. |
 | **Daily Policy Measures** | Daily | 190 countries, 1950–2023 | This data provides daily information on individual policy measures. |
-| **iBoP-S** | Annual | 195 countries, 1995–2023 | This data captures the overall stance of restrictions at the extensive margin. It is similar to FKRSU (LLM extension), but expanded to all eight categories of cross-border flow restrictions. Additional disaggregated subcategories are available upon request. |
+| **iBoP-S** | Annual | 195 countries, 1995–2023 | This data captures the overall stance of restrictions at the extensive margin. It is similar to FKRSU (LLM extension), but expanded to all eight categories of cross-border flow restrictions. Additional disaggregated subcategories are available upon request. *We recomemend that users start the series from 1999 (due coverage issues in the AREAER during the transition of the reporting structure between 1995-1998).* |
 | **FKRSU (LLM extension)** | Annual | 195 countries, 1995–2023 | The data expands and updates the dataset provided in Fernandez, Andres, Michael Klein, Alessandro Rebucci, Martin Schindler, and Martin Uribe, "Capital Control Measures: A New Dataset," IMF Economic Review 64, 2016, 548-574. |
 
 ---
@@ -214,7 +214,7 @@ The dataset also contains duplicate markers to indicate identical narratives wit
 
 ### iBoP-S (Stance Index)
 
-The stance index, iBoP-S, summarizes the level of cross-border restrictions in place for each country-year-category, based on the stance information provided in the AREAER. In contrast to iBoP-C, which relies on daily changes, the iBoP-S identifies the existence of restrictions for each subcategory reported in the AREAER stance sections. These granular classifications are available starting from 1995.
+The stance index, iBoP-S, summarizes the level of cross-border restrictions in place for each country-year-category, based on the stance information provided in the AREAER. In contrast to iBoP-C, which relies on daily changes, the iBoP-S identifies the existence of restrictions for each subcategory reported in the AREAER stance sections. These granular classifications are available starting from 1995. *We recomemend that users start the series from 1999 (due coverage issues in the AREAER during the transition of the reporting structure between 1995-1998).* 
 
 A key feature of the iBoP-S construction is that it respects the hierarchical structure of the AREAER. The AREAER organizes restrictions in a nested taxonomy: broad categories (e.g., capital and money market instruments) contain subcategories (e.g., equity inflows and outflows), which themselves contain more granular subcategories (e.g., equity purchases by non-residents and equity sales by residents abroad). The stance index mirrors this structure and is constructed using a bottom-up approach.
 
@@ -268,7 +268,7 @@ Thus, the value of each category is an equally weighted average over all subcomp
 
 The FKRSU index focuses on the overall stance of capital account restrictions (ka) and their inflow (kai) and outflow (kao) components. These indices are composed of 32 subcategories, covering 6 types of instruments: capital and money market securities, collective investment securities, derivatives, credit operations, direct investment, and real estate.
 
-This index replicates and expands upon Fernandez et al. (2016) using our LLM-based approach. While the original FKRSU index covers 100 countries from 1995 to 2019, this index expands coverage until 2023 for 195 countries.
+This index replicates and expands upon Fernandez et al. (2016) using our LLM-based approach. While the original FKRSU index covers 100 countries from 1995 to 2019, this index expands coverage until 2023 for 195 countries. *We recomemend that users start the series from 1999 (due coverage issues in the AREAER during the transition of the reporting structure between 1995-1998).* 
 
 **Excel file:** 
 - `excel_files/FKRSU_LLM.xlsx`
@@ -426,9 +426,9 @@ Policies are classified by their target:
 ### Restriction Types
 
 Policies are categorized by implementation method:
-- **Price-based**: Taxes, fees, or other cost-based measures
-- **Quantity-based**: Quotas, limits, or caps on volumes
-- **Administrative**: Approval requirements, documentation, or procedural restrictions
+- **Price-based**: Restrictions that directly alter the costs of transactions. Includes taxes, fees, subsidies, interest premiums, surrender and repatriation requirements, and reserve requirements.
+- **Quantity-based**: Restrictions that limit the volume or amount of transactions. Includes quotas, caps, bans and suspensions
+- **Administrative**: Procedural or institutional requirements that do not directly target cost or volume, such as licenses, authorization requirements, reporting requirements, maturity requirements, holding period requirements, or bilateral payments agreements.
 
 ### Hierarchical Aggregation (iBoP-S and FKRSU)
 
@@ -538,3 +538,4 @@ For questions, comments, or data requests, please contact the authors:
 ---
 
 **Last Updated**: December 2025
+
