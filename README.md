@@ -50,8 +50,6 @@ The data can be used freely and without further permission as long as explicit r
 
 ### iBoP-C Index
 
-**File:** `BFTU_iBoPC.xlsx`
-
 The change index, iBoP-C, measures changes in cross-border restrictions over time, starting from 1950 until 2023. The index relies on information from the Changes section of the AREAER, which reports changes in restrictions from all sections at the daily level starting from 1950.
 
 After classifying these changes, our baseline measure aggregates these changes by summing all tightenings reported at the country-time-category level and subtracting all loosenings reported at the same country-time-category level. We then cumulate these net tightenings from the first year until the most recent year.
@@ -67,6 +65,9 @@ iBoP\_C_{itc} = \sum_{\tau \leq t} \left( \sum_{k\in{\mathcal{T}_{i\tau c}}} Tig
 where $Tightening_{k,itc}$ is the $k$ change that tightens restrictions in country $i$, category $c$ and time $t$, and similarly $Loosening_{l,itc}$ is the $l$ change that loosens restrictions in country $i$, category $c$ and time $t$. The sets of measures are captured in $\mathcal{T}$ and $\mathcal{L}$, which can vary across countries, time, and category.
 
 While we report results at the annual frequency, we also provide indices at quarterly and monthly levels.
+
+**Excel file:** 
+- `excel_files/BFTU_iBoPC.xlsx`
 
 **Stata files:**
 - `stata_files/BFTU_iBoPC_Annual.dta`
@@ -94,8 +95,6 @@ While we report results at the annual frequency, we also provide indices at quar
 
 ### iBoP-C Intensity Index
 
-**File:** `BFTU_iBoPC_Intensity.xlsx`
-
 The iBoP-C Intensity Index extends the baseline iBoP-C measure by allowing each change in cross-border restrictions to have a different impact depending on its subjectively assessed severity. As with the baseline index, this measure draws on the Changes section of the AREAER, which documents daily changes to cross-border restrictions by country and categories from 1950 to present.
 
 After classifying changes into tightenings and loosenings, each measure is assigned an intensity score $\alpha \in \{0.1, 0.25, 0.5, 0.75, 1\}$. These scores reflect the scope and nature of the measure, with higher values corresponding to measures judged to have larger economic impacts on cross-border flows.
@@ -112,6 +111,10 @@ where $\alpha_{k,i\tau c}$ and $\alpha_{l,i\tau c}$ are the intensity weights as
 
 As with the baseline measure, we report results at annual, quarterly, and monthly frequencies.
 
+**Excel file:** 
+- `excel_files/BFTU_iBoPC_Intensity.xlsx`
+
+
 **Stata files:**
 - `stata_files/BFTU_iBoPC_Intensity_Annual.dta`
 - `stata_files/BFTU_iBoPC_Intensity_Quarterly.dta`
@@ -123,9 +126,10 @@ As with the baseline measure, we report results at annual, quarterly, and monthl
 
 ### iBoP-C Subcategories Index
 
-**File:** `BTFU_iBoPC_Subcategories.xlsx`
-
 The iBoP-C Subcategories Index further extends the baseline iBoP-C measure to 24 subcategories. This disaggregated index takes advantage of the more granular classifications of the Changes section in the AREAERs. While the AREAER began reporting these granular categories from 1999, measures in the Changes section have only been classified along these granular categories starting from 2016. We employ our ML methodology to extend these classifications for all measures reported in the Changes section back to 1950.
+
+**Excel file:** 
+- `excel_files/BTFU_iBoPC_Subcategories.xlsx`
 
 **Stata files:**
 - `stata_files/BTFU_iBoPC_Subcategories_Annual.dta`
@@ -177,11 +181,12 @@ The iBoP-C Subcategories Index further extends the baseline iBoP-C measure to 24
 
 ### Daily Policy Measures
 
-**File:** `BFTU_Daily_Policy_Measures.xlsx`
-
 This dataset contains the individual policy measures used in the construction of the iBoP-C and iBoP-C Intensity indices. Each measure is associated with several labels constructed using the LLM methodology outlined in the paper. The dataset includes the implementation date, category of restriction, direction of change (whether the policy tightened or loosened restrictions), an intensity-weighted measure of each policy, whether restrictions are being applied to inflows or outflows, and type of restriction implemented (price-based, quantity-based, or administrative).
 
 The dataset also contains duplicate markers to indicate identical narratives within a given country-date. Users of the dataset can choose whether or not to keep these duplicated values or just unique ones.
+
+**Excel file:** 
+- `excel_files/BFTU_Daily_Policy_Measures.xlsx`
 
 **Stata file:**
 - `stata_files/BFTU_Daily_Policy_Measures.dta`
@@ -209,8 +214,6 @@ The dataset also contains duplicate markers to indicate identical narratives wit
 
 ### iBoP-S (Stance Index)
 
-**File:** `BFTU_iBoPS.xlsx`
-
 The stance index, iBoP-S, summarizes the level of cross-border restrictions in place for each country-year-category, based on the stance information provided in the AREAER. In contrast to iBoP-C, which relies on daily changes, the iBoP-S identifies the existence of restrictions for each subcategory reported in the AREAER stance sections. These granular classifications are available starting from 1995.
 
 A key feature of the iBoP-S construction is that it respects the hierarchical structure of the AREAER. The AREAER organizes restrictions in a nested taxonomy: broad categories (e.g., capital and money market instruments) contain subcategories (e.g., equity inflows and outflows), which themselves contain more granular subcategories (e.g., equity purchases by non-residents and equity sales by residents abroad). The stance index mirrors this structure and is constructed using a bottom-up approach.
@@ -236,6 +239,9 @@ iBoP\_S_{itc} = Stance_{it}(c)
 
 Thus, the value of each category is an equally weighted average over all subcomponents, where weights arise naturally from the nested structure of the taxonomy. Unlike the iBoP-C, iBoP-S index is available only at the annual frequency, because the stance of restrictions is reported annually in the AREAER.
 
+**Excel file:** 
+- `excel_files/BFTU_iBoPS.xlsx`
+
 **Stata file:**
 - `stata_files/BFTU_iBoPS.dta`
 
@@ -260,11 +266,12 @@ Thus, the value of each category is an equally weighted average over all subcomp
 
 ### FKRSU (LLM Extension)
 
-**File:** `FKRSU_LLM.xlsx`
-
 The FKRSU index focuses on the overall stance of capital account restrictions (ka) and their inflow (kai) and outflow (kao) components. These indices are composed of 32 subcategories, covering 6 types of instruments: capital and money market securities, collective investment securities, derivatives, credit operations, direct investment, and real estate.
 
 This index replicates and expands upon Fernandez et al. (2016) using our LLM-based approach. While the original FKRSU index covers 100 countries from 1995 to 2019, this index expands coverage until 2023 for 195 countries.
+
+**Excel file:** 
+- `excel_files/FKRSU_LLM.xlsx`
 
 **Stata file:**
 - `stata_files/FKRSU_LLM.dta`
@@ -344,12 +351,13 @@ This index replicates and expands upon Fernandez et al. (2016) using our LLM-bas
 ## File Organization
 
 ```
-├── BFTU_Daily_Policy_Measures.xlsx
-├── BFTU_iBoPC.xlsx
-├── BFTU_iBoPC_Intensity.xlsx
-├── BFTU_iBoPS.xlsx
-├── BTFU_iBoPC_Subcategories.xlsx
-├── FKRSU_LLM.xlsx
+├── excel_files/
+│   ├── BFTU_Daily_Policy_Measures.xlsx
+│   ├── BFTU_iBoPC.xlsx
+│   ├── BFTU_iBoPC_Intensity.xlsx
+│   ├── BFTU_iBoPS.xlsx
+│   ├── BTFU_iBoPC_Subcategories.xlsx
+│   └── FKRSU_LLM.xlsx
 └── stata_files/
     ├── BFTU_Daily_Policy_Measures.dta
     ├── BFTU_iBoPC_Annual.dta
@@ -364,13 +372,6 @@ This index replicates and expands upon Fernandez et al. (2016) using our LLM-bas
     ├── BTFU_iBoPC_Subcategories_Quarterly.dta
     └── FKRSU_LLM.dta
 ```
-
-### Temporal Resolution
-
-- **Excel files**: Contain data at the finest available granularity for each dataset
-- **Stata files**:
-  - iBoP-C, iBoP-C Intensity, and iBoP-C Subcategories are provided in Annual, Monthly, and Quarterly frequencies
-  - Daily Policy Measures, iBoP-S, and FKRSU are provided at their native frequency (daily or annual)
 
 ---
 
@@ -409,11 +410,11 @@ Policy measures are assigned intensity scores based on their assessed economic i
 
 | Score | Interpretation |
 |-------|----------------|
-| 0.1 | Minimal impact |
-| 0.25 | Low impact |
-| 0.5 | Moderate impact |
-| 0.75 | High impact |
-| 1.0 | Very high impact |
+| 0.1 | When a notification or documentation requirement is needed |
+| 0.25 | When a tax is levied |
+| 0.5 | When a quantitative limit is imposed |
+| 0.75 | When an approval is required |
+| 1.0 | When a ban exists |
 
 ### Flow Direction Classification
 
@@ -464,10 +465,10 @@ The following table maps the eight main categories to their corresponding sectio
 import pandas as pd
 
 # Load iBoP-C index
-ibopc = pd.read_excel('BFTU_iBoPC.xlsx')
+ibopc = pd.read_excel('excel_files/BFTU_iBoPC.xlsx')
 
 # Load daily policy measures
-daily = pd.read_excel('BFTU_Daily_Policy_Measures.xlsx')
+daily = pd.read_excel('excel_files/BFTU_Daily_Policy_Measures.xlsx')
 ```
 
 **Stata Files:**
@@ -483,9 +484,6 @@ use "stata_files/BFTU_iBoPC_Intensity_Monthly.dta", clear
 
 - **Category prefixes**: `c1` through `c8` indicate the eight main categories
 - **Flow suffixes**: `_in` (inflows), `_out` (outflows), `_neutral` (neutral/both)
-- **Hierarchical variables** (FKRSU):
-  - `i` suffix = inflows (e.g., `eqi` = equity inflows)
-  - `o` suffix = outflows (e.g., `eqo` = equity outflows)
 
 ### Treatment of Duplicates
 
@@ -532,11 +530,11 @@ IMF Economic Review 64, 548-574.
 
 For questions, comments, or data requests, please contact the authors:
 
-- **Katharina Bergant** - International Monetary Fund & CEPR
-- **Andrés Fernández** - International Monetary Fund
-- **Ken Teoh** - International Monetary Fund
-- **Martín Uribe** - Columbia University & NBER
+- **Katharina Bergant** - kbergant@imf.org
+- **Andrés Fernández** - afernandez3@imf.org
+- **Ken Teoh** - hteoh@imf.org
+- **Martín Uribe** - mu2166@columbia.edu
 
 ---
 
-**Last Updated**: December 2024
+**Last Updated**: December 2025
