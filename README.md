@@ -521,7 +521,7 @@ IMF Economic Review 64, 548-574.
 
 ## Related Resources
 
-- **BTFU Data Dashboard**: [https://b855d13c-a1b6-427a-915d-f5205a569bf6.plotly.app/](https://b855d13c-a1b6-427a-915d-f5205a569bf6.plotly.app/)
+- **BTFU Data Dashboard**: [Data Dashboard](https://b855d13c-a1b6-427a-915d-f5205a569bf6.plotly.app)
 - **IMF AREAER**: [https://www.imf.org/en/Publications/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions](https://www.imf.org/en/Publications/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions)
 
 ---
