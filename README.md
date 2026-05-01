@@ -7,6 +7,8 @@ By Katharina Bergant (IMF & CEPR), Andrés Fernández (IMF), Ken Teoh (IMF), and
 
 The data can be used freely and without further permission as long as explicit reference is made to the above paper.
 
+**📊 Interactive dashboard:** [https://kteoh37.github.io/bftu-dashboard/](https://kteoh37.github.io/bftu-dashboard/) ([source](https://github.com/kteoh37/bftu-dashboard))
+
 ---
 
 **Disclaimer:** *The data reflect the authors' interpretation and codification of information provided in the IMF's Annual Report on Exchange Rate Arrangements and Restrictions (AREAER) and do not represent the views of the IMF, its Executive Board, or IMF Management.*
@@ -521,7 +523,7 @@ IMF Economic Review 64, 548-574.
 
 ## Related Resources
 
-- **BTFU Data Dashboard**: [Data Dashboard](https://b855d13c-a1b6-427a-915d-f5205a569bf6.plotly.app)
+- **BFTU Data Dashboard**: [https://kteoh37.github.io/bftu-dashboard/](https://kteoh37.github.io/bftu-dashboard/) — interactive viewer ([source](https://github.com/kteoh37/bftu-dashboard))
 - **IMF AREAER**: [https://www.imf.org/en/Publications/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions](https://www.imf.org/en/Publications/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions)
 
 ---
