@@ -7,7 +7,7 @@ By Katharina Bergant (IMF & CEPR), Andrés Fernández (IMF), Ken Teoh (IMF), and
 
 The data can be used freely and without further permission as long as explicit reference is made to the above paper.
 
-**📊 Interactive dashboard:** [https://kteoh37.github.io/bftu-dashboard/](https://kteoh37.github.io/bftu-dashboard/) 
+**📊 Interactive dashboard:** [https://kteoh37.github.io/bftu-dashboard/](https://kteoh37.github.io/bftu-dashboard/)
 
 ---
 
